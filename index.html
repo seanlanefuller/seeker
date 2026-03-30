@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seeker: A Journey of Wonder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="world"></canvas>
+
+        <div id="ui-layer">
+            <div id="intro-screen" class="active">
+                <h1>Seeker</h1>
+                <p>Wander. Discover. Wonder.</p>
+                <p class="subtitle">Use Arrow Keys or WASD to move.</p>
+                <button id="start-btn">Begin Journey</button>
+            </div>
+
+            <div id="hud" class="hidden">
+                <div class="score-container">
+                    <span id="collected-count">0</span> / <span id="total-count">?</span> Wonders Found
+                </div>
+                <div class="coords-container">
+                    POS: <span id="coords-x">0</span>, <span id="coords-y">0</span>
+                </div>
+            </div>
+
+            <div id="modal-overlay" class="hidden">
+                <div class="modal-content">
+                    <h2 id="modal-title">Knowledge Found</h2>
+                    <p id="modal-text">...</p>
+                    <button id="close-modal-btn">Continue</button>
+                </div>
+            </div>
+
+            <div id="victory-screen" class="hidden">
+                <h1>Ascension</h1>
+                <p class="subtitle">You have gathered all the light.</p>
+                <p>The universe is now yours to shape.</p>
+                <button id="restart-btn">Begin Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
